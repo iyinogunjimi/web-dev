@@ -1,11 +1,10 @@
-/* ROOT VARIABLES */
 :root {
     --color-white: #fff;
     --color-light: #f4f4f4;
     --color-dark: #525252;
     --color-black: #141415;
-    --color-primary: #f24e1e;
-    --color-primary-light: hsla(14, 89%, 53%, 12%);
+    --color-primary: #2f6fed;
+    --color-primary-light: hsla(221, 83%, 57%, 12%);
     --color-success: #29f526;
     --color-warning: #ffce31;
 
