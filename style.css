@@ -72,7 +72,7 @@ p {
 }
 
 section {
-    padding: 10rem 0 7rem;
+    padding: 6rem 0 5rem;
     max-width: 100vw;
     overflow-x: hidden;
 }
@@ -167,7 +167,7 @@ section.landing {
     place-items: center;
     position: relative;
     top: 5rem;
-    padding-bottom: 14em;
+    padding-bottom: 4rem;
 }
 
 section.landing .container {
@@ -670,8 +670,18 @@ footer .copyright {
    font-size: 0.8rem;
 }
 
+/* ============================= MEDIA QUERIES (TABLETS) ============================ */
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+   section.landing .container { grid-template-columns: 3rem auto 20rem; gap: 1rem; }
+   section.about .container { grid-template-columns: 20rem auto; gap: 2rem; }
+   section.services .container { grid-template-columns: 1fr; gap: 1.5rem; }
+   section.recent-work .projects { grid-template-columns: 1fr; }
+   section.skills .container { width: 70%; }
+   section.contact .container { width: 60%; }
+}
+
 /* ============================= MEDIA QUERIES (PHONES) ============================ */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
    h1 {
       font-size: 2.2rem;
    }
@@ -749,7 +759,94 @@ footer .copyright {
       display: inline-block;
    }
 
+   .container {
+      width: 90%;
+   }
+
+   /* LANDING - single column */
+   section.landing {
+      padding-bottom: 4rem;
+      top: 3rem;
+   }
+   section.landing .container {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 2rem;
+   }
+   section.landing .socials {
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 2rem;
+   }
+   section.landing .info h1 {
+      text-align: center;
+   }
+   section.landing .info p {
+      width: 100%;
+   }
+   section.landing .profile-area .outer-circle {
+      width: 18rem;
+      height: 18rem;
+   }
+   section.landing .profile-area .inner-circle {
+      width: 13rem;
+      height: 13rem;
+   }
+
+   /* ABOUT - single column, hide duplicate image */
+   section.about .container {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+   }
+   section.about .image {
+      display: none;
+   }
+
+   /* SKILLS - full width */
+   section.skills .container {
+      width: 90%;
+   }
+
+   /* SERVICES - single column */
+   section.services .container {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+   }
+
+   /* PORTFOLIO - single column */
+   section.recent-work {
+      padding-left: 5%;
+      padding-right: 5%;
+   }
+   section.recent-work h1 {
+      width: 100%;
+      text-align: center;
+   }
+   section.recent-work .projects {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+   }
+
+   /* TESTIMONIALS - full width */
    section.testimonials .container {
       width: 90%;
+   }
+
+   /* CONTACT - wider */
+   section.contact .container {
+      width: 85%;
+   }
+   section.contact form .btn {
+      width: 100%;
+   }
+
+   /* FOOTER - stacked */
+   footer .container {
+      flex-direction: column;
+      gap: 1.5rem;
+      text-align: center;
+   }
+   footer .container ul {
+      gap: 1.5rem;
    }
 }
