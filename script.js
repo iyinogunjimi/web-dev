@@ -11,8 +11,15 @@ skills.forEach(skill => {
 });
 
 const swiper = new Swiper('.swiper', {
-  scrollbar: {
-    el: '.swiper-scrollbar',
-    draggable: true,
-  },
+    scrollbar: {
+        el: '.swiper-scrollbar',
+        draggable: true,
+    },
 });
+
+const nav = document.querySelector('nav');
+const openBtn = document.getElementById('open-btn');
+const closeBtn = document.getElementById('close-btn');
+
+openBtn.addEventListener('click', () => nav.classList.add('active'));
+closeBtn.addEventListener('click', () => nav.classList.remove('active'));
