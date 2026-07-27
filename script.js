@@ -1,5 +1,16 @@
-const skills = document.querySelectorAll('.skill');
+const nav = document.querySelector('nav');
+const openBtn = document.getElementById('open-btn');
+const closeBtn = document.getElementById('close-btn');
 
+openBtn.addEventListener('click', () => nav.classList.add('active'));
+closeBtn.addEventListener('click', () => nav.classList.remove('active'));
+
+const navLinks = document.querySelectorAll('nav ul li a');
+navLinks.forEach(link => {
+    link.addEventListener('click', () => nav.classList.remove('active'));
+});
+
+const skills = document.querySelectorAll('.skill');
 skills.forEach(skill => {
     const head = skill.querySelector('.head');
     head.addEventListener('click', () => {
@@ -16,10 +27,3 @@ const swiper = new Swiper('.swiper', {
         draggable: true,
     },
 });
-
-const nav = document.querySelector('nav');
-const openBtn = document.getElementById('open-btn');
-const closeBtn = document.getElementById('close-btn');
-
-openBtn.addEventListener('click', () => nav.classList.add('active'));
-closeBtn.addEventListener('click', () => nav.classList.remove('active'));
